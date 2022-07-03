@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>{{data.editMode ? 'Edit': 'New'}} Card</h2>
+
+<mat-dialog-content class="content">
+    <mat-form-field appearance="standard">
+        <mat-label>Enter the title</mat-label>
+        <input [(ngModel)]="title" matInput />
+    </mat-form-field>
+    
+    <div class="task-container" *ngFor="let task of tasksLoop;let i = index">
+        <mat-form-field appearance="standard" class="task-input">
+            <mat-label>Task {{i + 1}} </mat-label>
+            <input [(ngModel)]="tasks[i]"  matInput />
+        </mat-form-field>
+        <button (click)="deleteTask(i)" mat-icon-button><mat-icon>delete</mat-icon></button>
+    </div>
+
+    <button (click)="addTask()" mat-button>Add Task</button>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button (click)="close()" mat-button>Cancel</button>
+    <button (click)="create()" mat-raised-button>{{data.editMode ? 'Save': 'Create'}}</button>
+</mat-dialog-actions>

@@ -1,5 +1,12 @@
-.container{
+.content{
     display: flex;
     flex-direction: column;
+}
+
+.task-container{
     width: 100%;
+}
+
+.task-input{
+    width: 90%;
 }
