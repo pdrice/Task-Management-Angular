@@ -1,6 +1,6 @@
 <div class="container">
     <div class="content-wrapper">
-        <button (click)="newCard()" mat-button class="new-button">New Card</button>
+        <button (click)="newCard()" mat-button class="new-button">New Tasks</button>
         <div  class="board-card" *ngFor="let card of boardService.boards[boardIndex].cards;let i = index" >
             <div class="title">
                 {{card.title}}

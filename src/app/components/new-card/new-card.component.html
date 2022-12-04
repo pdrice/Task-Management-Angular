@@ -5,7 +5,7 @@
         <mat-label>Enter the title</mat-label>
         <input [(ngModel)]="title" matInput />
     </mat-form-field>
-    
+
     <div class="task-container" *ngFor="let task of tasksLoop;let i = index">
         <mat-form-field appearance="standard" class="task-input">
             <mat-label>Task {{i + 1}} </mat-label>
@@ -14,7 +14,7 @@
         <button (click)="deleteTask(i)" mat-icon-button><mat-icon>delete</mat-icon></button>
     </div>
 
-    <button (click)="addTask()" mat-button>Add Task</button>
+    <button (click)="addTask()" mat-button color="primary">Add Task</button>
 
 </mat-dialog-content>
 
