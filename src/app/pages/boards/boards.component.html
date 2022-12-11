@@ -1,6 +1,6 @@
 <div class="container">
     <div class="content-wrapper">
-      <p>Click on new board to create a list your task.</p>
+      <p>Click on new board to create a board for your list of tasks.</p>
         <button mat-button (click)="openNewBoardDialog()" class="new-button">New Board</button>
         <div [routerLink]="'/view-board/' + i" class="board-card" *ngFor="let board of boardService.boards;let i = index">
             <div class="title">
